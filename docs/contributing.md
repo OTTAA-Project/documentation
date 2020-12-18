@@ -158,5 +158,34 @@ index
 ├── Pago
 ├── Pictos
 ├── PrimeraUltimaConexion
-└── Usuarios
+├── Usuarios
+└── Version
 ```
+
+### How to setup the files ###
+
+ OTTAA Project uses different's apis in order to offer different kinds of functions such as the location in the prediction and the google translate  language that's was implemented with the smart talk function.
+
+ OTTAA Project uses this Rest api :
+
+ 1. Google places
+ 2. Firebase
+ 3. Google Translate
+ 4. Galeria Araasac
+
+In order to set up the files follow these steps :
+
+  1. Go to the folder values : "/app/src/main/res/values"
+  2. create a new xml files 
+  3. copy this line of code
+
+ ```
+ <?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="places_api_key"> Replacement with the google places api key </string>
+    <string name="galeria_araasac_api_key"> Replacement with the galeria araasac api key </string>
+    <string name="google_translate_api_key"> Replacement with the google translate api key </string>
+    <string name="firebase_name_database"> Replacement with the firebase database path </string>
+</resources>
+```
+ 
