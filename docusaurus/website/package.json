@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.6"
+  },
+  "dependencies": {
+    "git-user-name": "^2.0.0"
   }
 }
