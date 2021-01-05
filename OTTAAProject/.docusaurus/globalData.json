@@ -1,0 +1,71 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "read-me",
+          "docs": [
+            {
+              "id": "accesibility-suite",
+              "path": "/docs/accesibility-suite"
+            },
+            {
+              "id": "analytics",
+              "path": "/docs/analytics",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "codeofconduct",
+              "path": "/docs/codeofconduct",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "contributing",
+              "path": "/docs/contributing",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "mdx",
+              "path": "/docs/mdx"
+            },
+            {
+              "id": "read-me",
+              "path": "/docs/read-me",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "Resources",
+              "path": "/docs/Resources",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "scrollAndPress",
+              "path": "/docs/scrollAndPress",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "sippAndPuff",
+              "path": "/docs/sippAndPuff",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "welcome",
+              "path": "/docs/welcome",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "wormAccessible",
+              "path": "/docs/wormAccessible",
+              "sidebar": "someSidebar"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

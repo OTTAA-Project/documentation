@@ -2,13 +2,8 @@
 id: accesibility-suite
 title: OTTAA Accessibility suite
 ---
-![picture](https://ottaaproject.com/img/ottaa-project.svg)
-
-## Welcome to OTTAA ACCESSIBILITY SUITE
-
-
-
-
+Welcome to the OTTAA Accessibility suite
+In this section you can find all about the OTTAA-Project Devices
 
 * **[Sip & Puff switch](/docs/sippAndPuff)**
 * **[Scroll & Press](/docs/scrollAndPress)**

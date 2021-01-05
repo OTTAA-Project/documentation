@@ -1,0 +1,94 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "isLast": true,
+  "docsSidebars": {
+    "someSidebar": [
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Readme",
+        "items": [
+          {
+            "type": "link",
+            "label": "Readme",
+            "href": "/docs/read-me"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Documentation",
+        "items": [
+          {
+            "type": "link",
+            "label": "Wiki",
+            "href": "/docs/welcome"
+          },
+          {
+            "type": "link",
+            "label": "Resources",
+            "href": "/docs/Resources"
+          },
+          {
+            "type": "link",
+            "label": "Analytics Implementation",
+            "href": "/docs/analytics"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Accessibility",
+        "items": [
+          {
+            "type": "link",
+            "label": "Sip & Puff switch",
+            "href": "/docs/sippAndPuff"
+          },
+          {
+            "type": "link",
+            "label": "Worm Accessible Keyboard",
+            "href": "/docs/wormAccessible"
+          },
+          {
+            "type": "link",
+            "label": "Scroll & Press",
+            "href": "/docs/scrollAndPress"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Information",
+        "items": [
+          {
+            "type": "link",
+            "label": "Contributing",
+            "href": "/docs/contributing"
+          },
+          {
+            "type": "link",
+            "label": "Code Of Conduct",
+            "href": "/docs/codeofconduct"
+          }
+        ]
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/analytics": "someSidebar",
+    "/docs/codeofconduct": "someSidebar",
+    "/docs/contributing": "someSidebar",
+    "/docs/read-me": "someSidebar",
+    "/docs/Resources": "someSidebar",
+    "/docs/scrollAndPress": "someSidebar",
+    "/docs/sippAndPuff": "someSidebar",
+    "/docs/welcome": "someSidebar",
+    "/docs/wormAccessible": "someSidebar"
+  }
+}

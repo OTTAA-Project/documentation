@@ -1,0 +1,17 @@
+{
+  "unversionedId": "codeofconduct",
+  "id": "codeofconduct",
+  "isDocsHomePage": false,
+  "title": "Code Of Conduct",
+  "description": "logo",
+  "source": "@site/docs\\codeofConduct.md",
+  "slug": "/codeofconduct",
+  "permalink": "/docs/codeofconduct",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/codeofConduct.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Contributing",
+    "permalink": "/docs/contributing"
+  }
+}

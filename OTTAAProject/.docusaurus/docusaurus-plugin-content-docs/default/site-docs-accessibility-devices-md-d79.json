@@ -1,0 +1,12 @@
+{
+  "unversionedId": "accesibility-suite",
+  "id": "accesibility-suite",
+  "isDocsHomePage": false,
+  "title": "OTTAA Accessibility suite",
+  "description": "picture",
+  "source": "@site/docs\\AccessibilityDevices.md",
+  "slug": "/accesibility-suite",
+  "permalink": "/docs/accesibility-suite",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/AccessibilityDevices.md",
+  "version": "current"
+}

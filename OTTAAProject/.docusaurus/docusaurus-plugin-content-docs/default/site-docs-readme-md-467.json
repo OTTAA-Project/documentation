@@ -1,0 +1,17 @@
+{
+  "unversionedId": "read-me",
+  "id": "read-me",
+  "isDocsHomePage": false,
+  "title": "Readme",
+  "description": "image",
+  "source": "@site/docs\\readme.md",
+  "slug": "/read-me",
+  "permalink": "/docs/read-me",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/readme.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "next": {
+    "title": "Welcome to OTTAA Project",
+    "permalink": "/docs/welcome"
+  }
+}

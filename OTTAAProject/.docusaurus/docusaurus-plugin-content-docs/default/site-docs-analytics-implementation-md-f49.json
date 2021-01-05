@@ -1,0 +1,21 @@
+{
+  "unversionedId": "analytics",
+  "id": "analytics",
+  "isDocsHomePage": false,
+  "title": "Analytics Implementation",
+  "description": "logo",
+  "source": "@site/docs\\AnalyticsImplementation.md",
+  "slug": "/analytics",
+  "permalink": "/docs/analytics",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/AnalyticsImplementation.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/docs/Resources"
+  },
+  "next": {
+    "title": "Sip & Puff switch",
+    "permalink": "/docs/sippAndPuff"
+  }
+}

@@ -29,6 +29,9 @@
       "sippAndPuff": {
         "title": "Sip & Puff switch"
       },
+      "video1": {
+        "title": "video1"
+      },
       "welcome": {
         "title": "Welcome to OTTAA Project",
         "sidebar_label": "Wiki"
