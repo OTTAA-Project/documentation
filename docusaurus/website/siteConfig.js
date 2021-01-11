@@ -23,15 +23,15 @@ const users = [
 const siteConfig = {
   title: 'OTTAA Project', // Title for your website.
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://ottaa-project.github.io/', // Your website URL
+  baseUrl: '/master', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'facebook',
+  projectName: 'documentation',
+  organizationName: 'ottaa-project',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -39,7 +39,6 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: "welcome",
-    href: "/docs",
     label: "Docs"},
   ],
 
