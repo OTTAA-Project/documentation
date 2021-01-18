@@ -1,0 +1,21 @@
+{
+  "unversionedId": "scrollAndPress",
+  "id": "scrollAndPress",
+  "isDocsHomePage": false,
+  "title": "Scroll & Press",
+  "description": "The Scroll & Press device imitates the functions of scrolling and left clicking of a traditional PC mouse, which enables the selection of items on the screen with OTTAA Project's screen scan functionality.  The device has been specifically designed for motor impaired people who have difficulties in their fine motor skills.",
+  "source": "@site/docs/scrollAndPress.md",
+  "slug": "/scrollAndPress",
+  "permalink": "/docs/scrollAndPress",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/scrollAndPress.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Worm Accessible Keyboard",
+    "permalink": "/docs/wormAccessible"
+  },
+  "next": {
+    "title": "Contributing",
+    "permalink": "/docs/contributing"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "contributing",
+  "id": "contributing",
+  "isDocsHomePage": false,
+  "title": "Contributing",
+  "description": "picture",
+  "source": "@site/docs/contributing.md",
+  "slug": "/contributing",
+  "permalink": "/docs/contributing",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/contributing.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Scroll & Press",
+    "permalink": "/docs/scrollAndPress"
+  },
+  "next": {
+    "title": "Code Of Conduct",
+    "permalink": "/docs/codeofconduct"
+  }
+}

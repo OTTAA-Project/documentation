@@ -76,7 +76,7 @@ export default {
       "@docusaurus/preset-bootstrap",
       {
         "docs": {
-          "sidebarPath": "C:\\Users\\ottaaproject\\Documents\\GitHub\\ottaaproject.github.io\\OTTAAProject\\sidebars.js",
+          "sidebarPath": "/Users/ottaaproject/Documents/GitHub/documentation/OTTAAProject/sidebars.js",
           "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/"
         },
         "blog": {

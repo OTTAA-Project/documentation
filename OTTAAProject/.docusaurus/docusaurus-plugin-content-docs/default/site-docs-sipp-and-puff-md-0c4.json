@@ -1,0 +1,21 @@
+{
+  "unversionedId": "sippAndPuff",
+  "id": "sippAndPuff",
+  "isDocsHomePage": false,
+  "title": "Sip & Puff switch",
+  "description": "The Sip & Puff switch is a device which is activated by sipping and puffing, simulating the functions of “left and right-click”. When the user puffs or blows, the left-click function is activated, on the other side, when the user sips or inhales the right-click function is activated.",
+  "source": "@site/docs/sippAndPuff.md",
+  "slug": "/sippAndPuff",
+  "permalink": "/docs/sippAndPuff",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/sippAndPuff.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Analytics Implementation",
+    "permalink": "/docs/analytics"
+  },
+  "next": {
+    "title": "Worm Accessible Keyboard",
+    "permalink": "/docs/wormAccessible"
+  }
+}
