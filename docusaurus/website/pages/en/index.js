@@ -60,7 +60,7 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/lines.svg`} />
+        <Logo img_src={`${baseUrl}/img/lines.svg`} />
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
@@ -116,7 +116,7 @@ class Index extends React.Component {
           {
             content:
               'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
+            image: `${baseUrl}/img/undraw_note_list.svg`,
             imageAlign: 'right',
             title: 'How it works',
           },
@@ -129,7 +129,7 @@ class Index extends React.Component {
         {[
           {
             content: 'We are helping thousands of speech impaired<br> people to communicate, to improve their life quality',
-            image: `${baseUrl}img/voice.svg`,
+            image: `${baseUrl}/img/voice.svg`,
             imageAlign: 'top',
             title: 'Returning the voice to all <br> those who lost it',
           },
