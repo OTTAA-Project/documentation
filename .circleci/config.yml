@@ -29,7 +29,7 @@ workflows:
   build_and_deploy:
     jobs:
      - deploy-website
-     - deploy:
-      - requires:
-        - deploy-website              
+     - deploy :
+        requires: 
+          - deploy-website              
 #         filters: *filter-only-master
