@@ -24,7 +24,7 @@ You can be part of this life-changer tech, join us in this social impact open so
  * [Web Page](https://ottaaproject.com)
 
 ### Documentation ###
- * [Resources](https://bitbucket.org/ottaav4/ottaa-5/wiki/Resources)
+ * [Resources](./Resources)
 
  * [Documentation](https://ottaaproject.com/javadoc)
 
@@ -34,8 +34,8 @@ You can be part of this life-changer tech, join us in this social impact open so
 
 ### Information ###
 
- * [Readme](https://bitbucket.org/ottaav4/ottaa-5/wiki/Readme)
+ * [Readme](./Readme)
 
- * [Contributing](https://bitbucket.org/ottaav4/ottaa-5/wiki/Contributing)
+ * [Contributing](./Contributing)
 
- * [Code of Conduct](https://bitbucket.org/ottaav4/ottaa-5/wiki/Code-of-Conduct)
+ * [Code of Conduct](./Code-of-Conduct)

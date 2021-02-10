@@ -29,6 +29,11 @@ workflows:
   build_and_deploy:
     jobs:
       - deploy-website:
-          context: ottaaproject
+          context: deployment
+          version: 0.1
+      - build:
+          context: release
+          version: 0.1
+                  
 
 #         filters: *filter-only-master
