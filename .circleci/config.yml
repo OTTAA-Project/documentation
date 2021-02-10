@@ -15,8 +15,3 @@ jobs:
             echo "machine github.com login "OTTAAProject" password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=OTTAAProject yarn run publish-gh-pages
 
-workflows:
-  version: 2
-  build_and_deploy:
-    jobs:
-      - deploy-website: ottaaproject 
