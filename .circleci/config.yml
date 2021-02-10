@@ -13,7 +13,7 @@ jobs:
             git config --global user.email "OTTAAProject@users.noreply.github.com"
             git config --global user.name "OTTAAProject"
             echo "machine github.com login "OTTAAProject" password $GITHUB_TOKEN" > ~/.netrc
-            cd ../docusaurus/website && yarn install && GIT_USER=OTTAAProject yarn run publish-gh-pages
+            cd docusaurus/website && yarn install && GIT_USER=OTTAAProject yarn run publish-gh-pages
 
 workflows:
   version: 2
