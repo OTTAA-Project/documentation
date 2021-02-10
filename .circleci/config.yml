@@ -30,10 +30,6 @@ workflows:
     jobs:
       - deploy-website:
           context: debug
-          version: 0.1
-      - build:
-          context: release
-          version: 0.1
-                  
-
+      - build-website:
+          context: release                
 #         filters: *filter-only-master
