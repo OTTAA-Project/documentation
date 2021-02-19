@@ -8,7 +8,6 @@
 #        - master
 
 version: 2
-
 jobs:
   deploy-website:
     docker:
@@ -21,17 +20,13 @@ jobs:
           name: Deploying to GitHub Pages
           command: |
             git config --global user.email "ottaa-project@users.noreply.github.com"
-            git config --global user.name "OTTAAProject"
-            echo "machine github.com login "OTTAAProject" password $GITHUB_TOKEN" > ~/.netrc
+            git config --global user.name  $CIRCLE_USERNAME
+            echo "machine github.com login $CIRCLE_USERNAME password $Password" > ~/.netrc
             cd website && yarn install && GIT_USER="OTTAAProject" yarn run publish-gh-pages
 
-deploy :
-  docker :
-    - image : circleci/node:8.11.1
-    - steps :
-      - run : git clone https://github.com/OTTAA-Project/OTTAA-Project.github.io
-    - attach_workspace:
-      at: _site  
-      deploy :
-        name : deploy
-        command : ./OTTAA-Project/.circleCi/deploy.sh 
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+     - deploy-website    
+#         filters: *filter-only-master
