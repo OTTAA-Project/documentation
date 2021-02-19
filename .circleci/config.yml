@@ -7,7 +7,9 @@
 #      only:
 #        - master
 
-version: 2
+orbs:
+  yarn: itinerisltd/yarn@2.1.1
+version: 2.1
 jobs:
   deploy-website:
     docker:
@@ -25,7 +27,7 @@ jobs:
             cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
 
 workflows:
-  version: 2
+  version: 2.1
   build_and_deploy:
     jobs:
      - deploy-website    
