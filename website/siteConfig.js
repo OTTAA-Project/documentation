@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'OTTAA Project', // Title for your website.
   tagline: '',
   url: 'https://ottaa-project.github.io/', // Your website URL
-  baseUrl: '/master', // Base URL for your project */
+  baseUrl: '', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
