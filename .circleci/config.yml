@@ -13,8 +13,10 @@ version: 2.1
 orbs:
   yarn: itinerisltd/yarn@2.1.1
 
+
+
 jobs:
-  test:
+    test:
     executor: node/default
     steps:
       - checkout
@@ -22,12 +24,6 @@ jobs:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
       - run: npm run test
-workflows:
-  test_my_app:
-    jobs:
-      - test
-
-jobs:
   deploy-website:
     docker:
       # specify the version you desire here
