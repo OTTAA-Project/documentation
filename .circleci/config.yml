@@ -8,6 +8,7 @@
 #        - master
 
 version: 2
+
 jobs:
   deploy-website:
     docker:
@@ -29,4 +30,7 @@ workflows:
   build_and_deploy:
     jobs:
      - deploy-website    
+     - deploy:
+          name: Deploy to GitHub Pages
+          command: ./OTTAA-Project.github.io/.circleci/deploy.sh
 #         filters: *filter-only-master
