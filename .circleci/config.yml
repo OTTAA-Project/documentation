@@ -21,8 +21,8 @@ jobs:
           command: |
             git config --global user.email "ottaa-project@users.noreply.github.com"
             git config --global user.name  $CIRCLE_USERNAME
-            echo "machine github.com login $CIRCLE_USERNAME password $Password" > ~/.netrc
-            cd website && yarn install && GIT_USER="OTTAAProject" yarn run publish-gh-pages
+            echo "machine github.com login = $CIRCLE_USERNAME password = $Password" > ~/.netrc
+            cd website && yarn install && GIT_USER= $CIRCLE_USERNAME yarn run publish-gh-pages
 
 workflows:
   version: 2
