@@ -7,43 +7,48 @@
 #      only:
 #        - master
 
-
-version: 2.1
-
+version: '2.1'
 orbs:
-  yarn: itinerisltd/yarn@2.1.1
-  
+  node: circleci/node@2.1
 jobs:
-  deploy-website:
+  install-node-example:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:8.11.1
-
+      - image: 'cimg/base:stable'
     steps:
       - checkout
-      - run:
-          name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email "ottaa-project@users.noreply.github.com"
-            git config --global user.name "$username"
-            echo "machine github.com login $username password $Password" > ~/.netrc
-            cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
-     - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install Dependencies
-          command: yarn install --immutable
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn        
-
+      - node/install:
+          install-yarn: true
+      - run: node --version
 workflows:
-  version: 2.1
-  build_and_deploy:
+  test_my_app:
     jobs:
-     - deploy-website    
+      - install-node-example
+
+
+# version: 2.1
+
+# orbs:
+#   yarn: itinerisltd/yarn@2.1.1
+  
+# jobs:
+#   deploy-website:
+#     docker:
+#       # specify the version you desire here
+#       - image: circleci/node:8.11.1
+
+#     steps:
+#       - checkout
+#       - run:
+#           name: Deploying to GitHub Pages
+#           command: |
+#             git config --global user.email "ottaa-project@users.noreply.github.com"
+#             git config --global user.name "$username"
+#             echo "machine github.com login $username password $Password" > ~/.netrc
+#             cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
+
+# workflows:
+#   version: 2.1
+#   build_and_deploy:
+#     jobs:
+#      - deploy-website    
 #         filters: *filter-only-master
