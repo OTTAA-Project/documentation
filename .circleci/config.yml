@@ -7,50 +7,93 @@
 #      only:
 #        - master
 
-version: 2.0
+
+aliases:
+  - &root-yarn
+    |
+      yarn install --non-interactive --cache-folder ~/.cache/yarn
+
+  - &root-restore-yarn-cache
+    keys:
+      - root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      # Fallback in case checksum fails
+      - root-yarn-{{ .Branch }}-
+
+  - &root-save-yarn-cache
+    paths:
+      - node_modules
+      - ~/.cache/yarn
+    key: root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+  - &v1-yarn
+    |
+      cd v1
+      yarn install --non-interactive --cache-folder ~/.cache/yarn
+
+  - &v1-restore-yarn-cache
+    keys:
+      - v1-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      # Fallback in case checksum fails
+      - v1-yarn-{{ .Branch }}-
+
+  - &v1-save-yarn-cache
+    paths:
+      - v1/node_modules
+      - ~/.cache/yarn
+    key: v1-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+  - &v2-yarn
+    |
+      cd v2
+      yarn install --non-interactive --cache-folder ~/.cache/yarn
+
+  - &v2-restore-yarn-cache
+    keys:
+      - v2-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      # Fallback in case checksum fails
+      - v2-yarn-{{ .Branch }}-
+
+  - &v2-save-yarn-cache
+    paths:
+      - v2/node_modules
+      - ~/.cache/yarn
+    key: v2-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+  - &filter-only-master
+    branches:
+      only:
+        - master
+
+  - &filter-ignore-gh-pages
+    branches:
+      ignore: gh-pages
+
+defaults: &defaults
+
+version: 2.1
+
+orbs:
+  yarn: itinerisltd/yarn@2.1.1
+  
 jobs:
-  build:
+  deploy-website:
     docker:
-      - image: cimg/ruby:2.7.1-node
-        auth:
-          username: $username
-          password: $Password  # context / project UI env-var reference
+      # specify the version you desire here
+      - image: circleci/node:8.11.1
+
     steps:
       - checkout
       - run:
-          name: "Update Node.js and npm"
+          name: Deploying to GitHub Pages
           command: |
-            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
-      - run:
-          name: Check current version of node
-          command: node -v
+            git config --global user.email "ottaa-project@users.noreply.github.com"
+            git config --global user.name "$username"
+            echo "machine github.com login $username password $Password" > ~/.netrc
+            cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
 
-
-# version: 2.1
-
-# orbs:
-#   yarn: itinerisltd/yarn@2.1.1
-  
-# jobs:
-#   deploy-website:
-#     docker:
-#       # specify the version you desire here
-#       - image: circleci/node:8.11.1
-
-#     steps:
-#       - checkout
-#       - run:
-#           name: Deploying to GitHub Pages
-#           command: |
-#             git config --global user.email "ottaa-project@users.noreply.github.com"
-#             git config --global user.name "$username"
-#             echo "machine github.com login $username password $Password" > ~/.netrc
-#             cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
-
-# workflows:
-#   version: 2.1
-#   build_and_deploy:
-#     jobs:
-#      - deploy-website    
+workflows:
+  version: 2.1
+  build_and_deploy:
+    jobs:
+     - deploy-website    
 #         filters: *filter-only-master
