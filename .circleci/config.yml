@@ -7,22 +7,24 @@
 #      only:
 #        - master
 
-version: '2.1'
-orbs:
-  node: circleci/node@2.1
+version: 2.0
 jobs:
-  install-node-example:
+  build:
     docker:
-      - image: 'cimg/base:stable'
+      - image: cimg/ruby:2.7.1-node
+        auth:
+          username: $username
+          password: $Password  # context / project UI env-var reference
     steps:
       - checkout
-      - node/install:
-          install-yarn: true
-      - run: node --version
-workflows:
-  test_my_app:
-    jobs:
-      - install-node-example
+      - run:
+          name: "Update Node.js and npm"
+          command: |
+            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
+            curl https://www.npmjs.com/install.sh | sudo bash
+      - run:
+          name: Check current version of node
+          command: node -v
 
 
 # version: 2.1
