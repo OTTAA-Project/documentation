@@ -16,20 +16,11 @@ orbs:
 
 
 jobs:
-    test:
-    executor: node/default
-    steps:
-      - checkout
-      - node/install-packages:
-          cache-path: ~/project/node_modules
-          override-ci-command: npm install
-      - run: npm run test
-  deploy-website:
-    docker:
+     deploy-website:
+      docker:
       # specify the version you desire here
       - image: circleci/node:8.11.1
-
-    steps:
+     steps:
       - checkout
       - run:
           name: Deploying to GitHub Pages
@@ -38,6 +29,14 @@ jobs:
             git config --global user.name "$username"
             echo "machine github.com login $username password $Password" > ~/.netrc
             cd website && yarn install && GIT_USER="$username" yarn run publish-gh-pages
+        test:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run: npm run test        
 
 workflows:
   version: 2.1
