@@ -34,8 +34,8 @@ You can be part of this life-changer tech, join us in this social impact open so
 
 ### Information ###
 
- * [Readme](./Readme)
+ * [Readme](././Readme)
 
- * [Contributing](./Contributing)
+ * [Contributing](././Contributing)
 
- * [Code of Conduct](./Code-of-Conduct)
+ * [Code of Conduct](././Code-of-Conduct)
