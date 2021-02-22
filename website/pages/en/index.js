@@ -66,7 +66,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href="#try">Welcome </Button>
             <Button href={docUrl('welcome')}>Documentation</Button>
-            <Button href={docUrl('accesibility-suite')}>Accessibility Device</Button>
+            <Button href={docUrl('accesibility-suite')}>OTTAA Accessibility Suite</Button>
           </PromoSection>
         </div>
       </SplashContainer>
