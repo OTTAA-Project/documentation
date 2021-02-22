@@ -1,22 +1,13 @@
-version: 2
-jobs:
-  deploy-website:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.11.1
-
-    steps:
-      - checkout
-      - run:
-          name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email "OTTAAProject@users.noreply.github.com"
-            git config --global user.name "OTTAAProject"
-            echo "machine github.com login "OTTAAProject" password $GITHUB_TOKEN" > ~/.netrc
-            cd /docusaurus/website && yarn install && GIT_USER=OTTAAProject yarn run publish-gh-pages
-
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
 workflows:
-  version: 2
-  build_and_deploy:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
     jobs:
-      - deploy-website
+      - welcome/run
