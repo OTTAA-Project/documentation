@@ -131,7 +131,7 @@ class Index extends React.Component {
             content: 'We are helping thousands of speech impaired<br> people to communicate, to improve their life quality',
             image: `${baseUrl}./img/voice.svg`,
             imageAlign: 'top',
-            title: 'Returning the voice to all <br> those who lost it',
+            title: 'Returning the voice to all <br> those who lost it ',
           },
         
         ]}
