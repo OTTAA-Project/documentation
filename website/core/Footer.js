@@ -93,6 +93,10 @@ class Footer extends React.Component {
               </div>
             )}
           </div>
+          <div>
+            <h5>License</h5>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License"  src={`https://i.creativecommons.org/l/by/4.0/88x31.png`} /></a><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">This work is licensed under a  Creative Commons Attribution 4.0 International License</a>.
+          </div>
         </section>
 
         <a
@@ -101,7 +105,7 @@ class Footer extends React.Component {
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
-            src={`${this.props.config.baseUrl}img/oss_logo.png`}
+            src={`${this.props.config.baseUrl}img/lines.svg`}
             alt="Facebook Open Source"
             width="170"
             height="45"
