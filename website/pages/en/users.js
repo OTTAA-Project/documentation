@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
@@ -31,16 +32,14 @@ class Users extends React.Component {
             <div className="prose">
               <h1>Who is Using This?</h1>
               <p>This project is used by many folks</p>
+              <a rel="google" href={'www.google.com'}>
+              <img src="/img/aedin.png"></img>
+              </a>
             </div>
             <div className="logos">{showcase}</div>
             {siteConfig.repoUrl && (
               <React.Fragment>
-                <p>Are you using this project?</p>
-                <a
-                  href={`${siteConfig.repoUrl}/edit/master/website/siteConfig.js`}
-                  className="button">
-                  Add your company
-                </a>
+                <img src="/img/aedin.png"></img>
               </React.Fragment>
             )}
           </div>

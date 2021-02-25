@@ -1,5 +1,5 @@
 ---
-id: sippAndPuff
+id: sipAndPuff
 title: Sip & Puff switch 
 ---
 The Sip & Puff switch is a device which is activated by sipping and puffing, simulating the functions of “left and right-click”. When the user puffs or blows, the **left-click** function is activated, on the other side, when the user sips or inhales the **right-click** function is activated.
