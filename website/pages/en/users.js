@@ -32,7 +32,7 @@ class Users extends React.Component {
             <div className="prose">
               <h1>Who is Using This?</h1>
               <p>This project is used by many folks</p>
-              <a rel="google" href={'www.google.com'}>
+              <a  href="https://www.aedin.org/">
               <img src="/img/aedin.png"></img>
               </a>
             </div>
